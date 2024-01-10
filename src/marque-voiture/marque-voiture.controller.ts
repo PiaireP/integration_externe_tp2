@@ -43,7 +43,7 @@ export class MarqueVoitureController {
         try {
             const marqueVoitureData = await this.voitureMarqueService.getAllMarqueVoitures();
             return response.status(HttpStatus.OK).json({
-                message: 'All students data found successfully', marqueVoitureData,
+                message: 'All marque voiture data found successfully', marqueVoitureData,
             });
         } catch (err) {
             return response.status(err.status).json(err.response);
